@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Team 1:
+  = @match.teamA
+%p
+  %strong Team 2:
+  = @match.teamB
+%p
+  %strong Date:
+  = @match.date
+%p
+  %strong Info:
+  = @match.info
+= link_to 'Edit', edit_match_path(@match)
+|
+= link_to 'Back', matches_path

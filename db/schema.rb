@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110165709) do
+ActiveRecord::Schema.define(version: 20161110193525) do
 
   create_table "matches", force: :cascade do |t|
     t.string   "teamA"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20161110165709) do
     t.string   "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.         "TeamAscore"
+    t.         "TeamBScore"
   end
 
 end
