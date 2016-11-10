@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :matches
-  get 'home/Home'
+  #get 'home/Home'
 
   root 'home#Home'
 
