@@ -5,6 +5,8 @@ class CreateMatches < ActiveRecord::Migration[5.0]
       t.string :teamB
       t.date :date
       t.string :info
+      t.integer :teamAScore
+      t.integer :teamBScore
 
       t.timestamps
     end

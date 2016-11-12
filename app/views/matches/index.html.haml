@@ -7,6 +7,7 @@
       %th Team 2
       %th Date
       %th Info
+      %th Score
       %th{:colspan => "3"}
   %tbody
     - @matches.each do |match|
@@ -15,6 +16,8 @@
         %td= match.teamB
         %td= match.date
         %td= link_to 'View info', match
+        %td= match.teamAScore
+        %td= match.teamBScore
         /%td= link_to 'Show', match
         %td= link_to 'Edit', edit_match_path(match)
         %td= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' }

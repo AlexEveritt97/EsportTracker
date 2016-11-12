@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 20161110193525) do
   create_table "matches", force: :cascade do |t|
     t.string   "teamA"
     t.string   "teamB"
+    t.integer  "teamAScore"
+    t.integer  "teamBScore"
     t.date     "date"
     t.string   "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.         "TeamAscore"
-    t.         "TeamBScore"
   end
 
 end

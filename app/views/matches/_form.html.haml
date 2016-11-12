@@ -16,6 +16,12 @@
   .field
     = f.label :date
     = f.date_select :date
+  .field
+    = f.label :"Team 1 score"
+    = f.number_field :teamAScore, max: 50
+  .field
+    = f.label :"Team 2 score"
+    = f.number_field :teamBScore, max:50
   / .field
   /   = f.label :info
   /   = f.text_field :info
