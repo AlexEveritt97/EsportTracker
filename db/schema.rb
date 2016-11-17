@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115113219) do
+ActiveRecord::Schema.define(version: 20161117142023) do
 
   create_table "matches", force: :cascade do |t|
     t.string   "teamA"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20161115113219) do
     t.string  "name"
     t.integer "rating"
     t.string  "info"
+    t.integer "team_id"
+    t.index ["team_id"], name: "index_players_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

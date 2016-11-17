@@ -6,7 +6,7 @@
       %th Name
       %th Rating
       %th Info
-      %th
+      %th Team
       %th
       %th
 
@@ -16,6 +16,7 @@
         %td= player.name
         %td= player.rating
         %td= player.info
+        %td= player.team.name if player.team
         %td= link_to 'Show', player
         %td= link_to 'Edit', edit_player_path(player)
         %td= link_to 'Destroy', player, :method => :delete, :data => { :confirm => 'Are you sure?' }
