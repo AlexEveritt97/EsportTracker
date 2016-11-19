@@ -1,0 +1,9 @@
+= form_tag request_contact_path, method:'post' do
+
+  = label_tag :email, "email"
+  = email_field_tag :email," ", title: "enter email", size: 50
+
+  = label_tag :message, "message"
+  = text_field_tag :message, " ", title: "enter message", size: 100
+
+  = submit_tag "submit"

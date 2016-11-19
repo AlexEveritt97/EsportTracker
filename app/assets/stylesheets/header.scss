@@ -12,13 +12,6 @@ ul.navbar {
 }
 li.navbaritem{
 	display: inline-block;
-	&:hover{
-		background-color: #d1670e;
-		a.navLink{
-			background-color: #d1670e;
-			color: #000000;
-		}
-	}
 }
 
 a.navLink{
@@ -28,6 +21,7 @@ a.navLink{
 	color: #d1670e;
 	text-align: center;
 	&:hover{
+		text-decoration: none;
 		background-color: #d1670e;
 		color: #000000;
 	} 
