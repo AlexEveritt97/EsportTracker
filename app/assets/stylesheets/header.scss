@@ -1,12 +1,37 @@
-ul {
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+
+ul.navbar {
+	list-style-type: none;
+	text-align: center;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	overflow: hidden;
+	border-radius: 0px !important; //bootstrap was cuasing rounded edges where I didnt want them
+
 }
-li{
-  display: inline;
-  text-align: center;
+li.navbaritem{
+	display: inline-block;
+	&:hover{
+		background-color: #d1670e;
+		a.navLink{
+			background-color: #d1670e;
+			color: #000000;
+		}
+	}
 }
+
+a.navLink{
+	padding-top: 11px;
+	padding-bottom: 11px;
+	display: inline-block;
+	color: #d1670e;
+	text-align: center;
+	&:hover{
+		background-color: #d1670e;
+		color: #000000;
+	} 
+}
+
 
 
