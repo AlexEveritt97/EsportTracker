@@ -17,6 +17,5 @@
     = f.text_field :info
   .field
     = f.label :team
-    = f.number_field :team_id
-  .actions
+    = f.collection_select :team_id, Team.all, :id, :name
     = f.submit 'Save'
