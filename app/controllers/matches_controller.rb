@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
 
+
   # GET /matches
   # GET /matches.json
   def index
@@ -15,16 +16,33 @@ class MatchesController < ApplicationController
   # GET /matches/new
   def new
     @match = Match.new
+
+    @teams = Team.all
+
+
   end
 
   # GET /matches/1/edit
   def edit
+    @teams = Team.all
+
   end
 
   # POST /matches
   # POST /matches.json
   def create
+
     @match = Match.new(match_params)
+
+    @teamsNow = @match.teams
+
+    @match.teams.delete(@teamsNow)
+
+    @teamA = Team.where(name: params[:match][:teamA])
+    @teamB = Team.where(name: params[:match][:teamB])
+
+    @match.teams << @teamA
+    @match.teams << @teamB
 
     respond_to do |format|
       if @match.save
@@ -40,6 +58,18 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
+    
+    @teamsNow = @match.teams
+
+    @match.teams.delete(@teamsNow)
+
+    @teamA = Team.where(name: params[:match][:teamA])
+    @teamB = Team.where(name: params[:match][:teamB])
+
+    @match.teams << @teamA
+    @match.teams << @teamB
+
+
     respond_to do |format|
       if @match.update(match_params)
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }

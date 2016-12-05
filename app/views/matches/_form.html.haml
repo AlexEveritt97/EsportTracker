@@ -9,10 +9,10 @@
           %li= message
   .field
     = f.label :"team 1"
-    = f.text_field :teamA
+    = f.collection_select :teamA, @teams, :name, :name
   .field
     = f.label :"team 2"
-    = f.text_field :teamB
+    = f.collection_select :teamB, @teams, :name, :name
   .field
     = f.label :date
     = f.date_select :date

@@ -7,6 +7,18 @@
   %b Info:
   = @team.info
 
+
+%table
+  %tbody
+    - @team.matches.first(10).each do |match|
+      %tr
+        %td.matchData= match.teamA
+        %td.matchData= match.teamAScore
+        %td.matchData= match.teamBScore
+        %td.matchData= match.teamB
+        %td.matchData= link_to 'view', match
+        %br/
+
 = link_to 'Edit', edit_team_path(@team)
 \|
 = link_to 'Back', teams_path
