@@ -1,27 +1,30 @@
 %p#notice= notice
-%h1 Matches
-%table
-  %thead
-    %tr
-      %th.matchInfo Team 1
-      %th.matchInfo 
-      %th.matchInfo
-      %th.matchInfo Team 2
-      %th.matchInfo Date
-      %th.matchInfo Info
-      %th{:colspan => "3"}
-  %tbody
-    - @matches.each do |match|
-      %tr
-        %td.matchData= match.teamA
-        %td.matchData= match.teamAScore
-        %td.matchData= match.teamBScore
-        %td.matchData= match.teamB
-        %td.matchData= match.date
-        %td= link_to 'View info', match
-        /%td= link_to 'Show', match
-        %td= link_to 'Edit', edit_match_path(match)
-        %td= link_to 'Destroy', match, :method => :destroy, data: { confirm: 'Are you sure?' }
-%br/
+%h1.matchTitle Matches
+%div.column-center-match
+  %div.matches
+    %table
+      %thead
+        %tr
+          %th.matchInfo Team 1
+          %th.matchInfo 
+          %th.matchInfo
+          %th.matchInfo Team 2
+          %th.matchInfo Date
+          %th.matchInfo
+          %th.matchInfo
+          %th.matchInfo
+      %tbody
+        - @matches.each do |match|
+          %tr
+            %td.matchData= match.teamA
+            %td.matchData= match.teamAScore
+            %td.matchData= match.teamBScore
+            %td.matchData= match.teamB
+            %td.matchData= match.date
+            %td.matchData= link_to 'View info', match
+            %td.matchData= link_to 'Edit', edit_match_path(match)
+            %td.matchData= link_to 'Destroy', match, :method => :destroy, data: { confirm: 'Are you sure?' }
+    %br/
+    %p.matchData= link_to 'Add New Match', new_match_path
 
-= link_to 'New Match', new_match_path
+

@@ -1,16 +1,31 @@
 %p#notice= notice
-%p
-  %strong Team 1:
-  = @match.teamA
-%p
-  %strong Team 2:
-  = @match.teamB
-%p
-  %strong Date:
-  = @match.date
-%p
-  %strong Info:
-  = @match.info
-= link_to 'Edit', edit_match_path(@match)
-|
-= link_to 'Back', matches_path
+
+
+%div.column-center-match
+  %table
+    %thead
+      %tr
+        %th.match-teams-header= @match.teamA
+        %th.match-teams-header Vs
+        %th.match-teams-header= @match.teamB
+    %tbody
+      %tr
+        %td.match-score-header= @match.teamAScore
+        %td.match-score-header
+        %td.match-score-header= @match.teamBScore
+
+%div.column-center-match
+  %p.matchInfo
+    %strong Date:
+    = @match.date
+
+  - @teams.each do |team|
+    %h4.match-team-head
+      = team.name + " players:"
+    - team.players.each do |player|
+      %p.match-team-player-info
+        = player.name + " "
+
+
+  %p.links= link_to 'Edit', edit_match_path(@match)
+  %p.links= link_to 'Back', matches_path

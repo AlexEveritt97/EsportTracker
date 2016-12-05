@@ -1,5 +1,3 @@
-%h1= t('.title')
-%p=  t('.content')
 
 
 %div.column-left
@@ -15,7 +13,7 @@
             %td.matchData= match.teamBScore
             %td.matchData= match.teamB
             %td.matchData= link_to 'view', match
-            %br/
+            
 
 %div.column-center
   %div.teams
@@ -28,7 +26,6 @@
             %td.teamData= "#{team.rank}" + "."
             %td.teamData= team.name 
             %td.teamData= link_to 'view', team
-            %br/
 
 %div.column-right
   %div.players
@@ -42,7 +39,6 @@
             %td.playerData= player.rating
             %td.playerData= player.team.name
             %td.playerData= link_to 'view', player
-            %br/
 
 %br/
 

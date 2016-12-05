@@ -11,6 +11,8 @@ class MatchesController < ApplicationController
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @teams = @match.teams
+    
   end
 
   # GET /matches/new
@@ -58,7 +60,7 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
-    
+
     @teamsNow = @match.teams
 
     @match.teams.delete(@teamsNow)
