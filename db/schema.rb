@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117142023) do
+ActiveRecord::Schema.define(version: 20161202140056) do
 
   create_table "matches", force: :cascade do |t|
     t.string   "teamA"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161117142023) do
     t.string   "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "rank"
   end
 
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :matches
   get 'home/Home'
 
-  root 'matches#index'
+  root 'home#Home'
 
   get  'contact', to: 'contact#contact'
   post 'request_contact', to: 'contact#request_contact'

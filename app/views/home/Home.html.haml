@@ -2,6 +2,47 @@
 %p=  t('.content')
 
 
-%p
-  link to matches page:
-  %a{:href => "/matches", :title => "Matches"} Matches
+%div.column-left
+  %div.matches
+    %h3 Matches:
+    %h5.links= link_to 'see all', matches_url
+    %table
+      %tbody
+        - @matches.first(10).each do |match|
+          %tr
+            %td.matchData= match.teamA
+            %td.matchData= match.teamAScore
+            %td.matchData= match.teamBScore
+            %td.matchData= match.teamB
+            %td.matchData= link_to 'view', match
+            %br/
+
+%div.column-center
+  %div.teams
+    %h3 Top 10 Teams:
+    %h5.links= link_to 'see all', matches_url
+    %table
+      %tbody
+        - @teams.each do |team|
+          %tr
+            %td.teamData= "#{team.rank}" + "."
+            %td.teamData= team.name 
+            %td.teamData= link_to 'view', team
+            %br/
+
+%div.column-right
+  %div.players
+    %h3 Top players:
+    %h5.links= link_to 'see all', players_url
+    %table
+      %tbody
+        -@players.each do |player|
+          %tr
+            %td.playerData= player.name
+            %td.playerData= player.rating
+            %td.playerData= player.team.name
+            %td.playerData= link_to 'view', player
+            %br/
+
+%br/
+

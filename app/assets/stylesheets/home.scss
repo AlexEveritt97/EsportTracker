@@ -1,3 +1,73 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.column-left {
+	float: left;
+	text-align: center;
+	width: 32%;
+	background-color: rgba(78, 79, 81, 1);
+	border-radius: 5px;
+	margin-right: 1%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1670e;
+	text-color: #ffffff;
+}
+
+.column-center{
+	display: inline-block;
+	text-align: center;
+	width: 32%;
+	background-color: rgba(78, 79, 81, 1);
+	border-radius: 5px;
+	margin-right: 1%;
+	margin-left: 1%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1670e;
+	text-color: #ffffff;
+	
+}
+
+.column-right{
+	float: right;
+	text-align: center;
+	width: 32%;
+	background-color: rgba(78, 79, 81, 1);
+	border-radius: 5px;
+	margin-left: 1%; 
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1670e;
+	text-color: #ffffff;
+}
+
+.column-left .matches td.matchData {
+	text-align: center;
+	
+	width: 10%;
+}
+
+.matches, .teams, .players {
+	color: #ffffff;
+}
+
+.column-center .teams td.teamData{
+	text-align: center;
+	width: 10%;
+}
+
+
+.column-right .players td.playerData{
+	text-align: center;
+	width: 10%;
+}
+
+.links a, .matchData a, .teamData a, .playerData a {
+	color: #d1670e;
+	&:hover{
+		color:  #d1670e;
+	}
+}
