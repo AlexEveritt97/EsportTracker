@@ -7,23 +7,21 @@
       %ul
         - match.errors.full_messages.each do |message|
           %li= message
+
   .field
-    = f.label :"team 1"
+    = f.label :"team 1", :class => "form-label"
     = f.collection_select :teamA, @teams, :name, :name
   .field
-    = f.label :"team 2"
+    = f.label :"team 2", :class => "form-label"
     = f.collection_select :teamB, @teams, :name, :name
   .field
-    = f.label :date
+    = f.label :date, :class => "form-label"
     = f.date_select :date
   .field
-    = f.label :"Team 1 score"
+    = f.label :"Team 1 score", :class => "form-label"
     = f.number_field :teamAScore, max: 50
   .field
-    = f.label :"Team 2 score"
+    = f.label :"Team 2 score", :class => "form-label"
     = f.number_field :teamBScore, max:50
-  / .field
-  /   = f.label :info
-  /   = f.text_field :info
   .actions
     = f.submit

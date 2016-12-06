@@ -7,13 +7,13 @@
           %li= msg
 
   .field
-    = f.label :name
+    = f.label :name, :class => "form-label"
     = f.text_field :name
   .field
-    = f.label :info
+    = f.label :info, :class => "form-label"
     = f.text_field :info
   .field
-    = f.label :rank
+    = f.label :rank, :class => "form-label"
     = f.number_field :rank
   .actions
     = f.submit 'Save'

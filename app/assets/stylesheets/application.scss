@@ -34,3 +34,58 @@ body{
 	// background: linear-gradient(-135deg, #191919 , #f79000);
 	        
 }
+
+// general CSS for the input forms
+.form-wrapper{
+	display: block;
+	width: 40%;
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(78, 79, 81, 1);
+	text-align: center;
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1670e;
+	text-color: #ffffff;
+	margin-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	a{
+		color: #d1670e;
+		&:hover{
+			color:  #d1670e;
+		}
+	}
+}
+
+input[type=text], select, input[type=number]{
+	display: inline-block;
+	border-radius: 3px;
+	width: 20%;
+}
+
+.form-label{
+	color: white;
+	display: block;
+}
+
+
+
+input[type=submit]{
+	background-color: #d1670e;
+	border-radius: 3px;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	&:hover{
+		color: white;
+	}
+}
+
+.form-title{
+	color: white;
+}

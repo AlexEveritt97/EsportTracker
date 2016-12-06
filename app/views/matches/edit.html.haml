@@ -1,5 +1,6 @@
-%h1 Editing Match
-= render 'form', match: @match
-= link_to 'Show', @match
-|
-= link_to 'Back', matches_path
+%div.form-wrapper
+	%h1.form-title Editing Match
+	= render 'form', match: @match
+	= link_to 'Show', @match
+	|
+	= link_to 'Back', matches_path
