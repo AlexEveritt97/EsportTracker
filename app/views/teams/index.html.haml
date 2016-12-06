@@ -6,9 +6,13 @@
         %tr
           %th.teamInfo Name
           %th.teamInfo Info
+          %th.teamInfo 
+          %th.teamInfo
           %th.teamInfo Players
           %th.teamInfo
+          %th.teamInfo
           %th.teamInfo Actions
+          %th.teamInfo
           %th.teamInfo
 
       %tbody
@@ -17,7 +21,7 @@
             %td.teamData= team.name
             %td.teamData= team.info
             - team.players.each do |player|
-              %td.teamData= player.name + ", "
+              %td.teamData=  player.name + " "
             %td.teamData= link_to 'Show', team
             %td.teamData= link_to 'Edit', edit_team_path(team)
             %td.teamData= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
