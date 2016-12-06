@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205130829) do
+ActiveRecord::Schema.define(version: 20161206110241) do
 
   create_table "matches", force: :cascade do |t|
     t.string   "teamA"
     t.string   "teamB"
-    t.integer  "teamAScore"
-    t.integer  "teamBScore"
+    t.integer  "teamAScore", default: 0, null: false
+    t.integer  "teamBScore", default: 0, null: false
     t.date     "date"
     t.string   "info"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "matches_teams", id: false, force: :cascade do |t|
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20161205130829) do
 
   create_table "players", force: :cascade do |t|
     t.string  "name"
-    t.integer "rating"
+    t.integer "rating",  default: 0, null: false
     t.string  "info"
     t.integer "team_id"
     t.index ["team_id"], name: "index_players_on_team_id"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 20161205130829) do
   create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.string   "info"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "rank"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "rank",       default: 100, null: false
   end
 
 end

@@ -1,15 +1,21 @@
 %p#notice= notice
+%div.column-center-player
+  %div.players
+    %p
+    %b Name:
+    = @player.name
+    %p
+    %b Rating:
+    = @player.rating
+    %p
+    %b Info:
+    = @player.info
+    %p
+    %b Team:
+    = link_to @player.team.name, @player.team
 
-%p
-  %b Name:
-  = @player.name
-%p
-  %b Rating:
-  = @player.rating
-%p
-  %b Info:
-  = @player.info
+    %br/
 
-= link_to 'Edit', edit_player_path(@player)
-\|
-= link_to 'Back', players_path
+    = link_to 'Edit', edit_player_path(@player)
+    \|
+    = link_to 'Back', players_path

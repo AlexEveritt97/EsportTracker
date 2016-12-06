@@ -25,6 +25,6 @@
             %td.matchData= link_to 'Edit', edit_match_path(match)
             %td.matchData= link_to 'Destroy', match, :method => :destroy, data: { confirm: 'Are you sure?' }
     %br/
-    %p.matchData= link_to 'Add New Match', new_match_path
+    = link_to 'Add New Match', new_match_path
 
 

@@ -1,26 +1,28 @@
-%h1 Listing players
+%h1.matchTitle All players
+%div.column-center-player
+  %div.players
+    %table
+      %thead
+        %tr
+          %th.playerInfo Name
+          %th.playerInfo Rating
+          %th.playerInfo Info
+          %th.playerInfo Team
+          %th.playerInfo
+          %th.playerInfo Actions
+          %th.playerInfo
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Rating
-      %th Info
-      %th Team
-      %th
-      %th
+      %tbody
+        - @players.each do |player|
+          %tr
+            %td.playerData= player.name
+            %td.playerData= player.rating
+            %td.playerData= player.info
+            %td.playerData= player.team.name if player.team
+            %td.playerData= link_to 'Show', player
+            %td.playerData= link_to 'Edit', edit_player_path(player)
+            %td.playerData= link_to 'Destroy', player, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-  %tbody
-    - @players.each do |player|
-      %tr
-        %td= player.name
-        %td= player.rating
-        %td= player.info
-        %td= player.team.name if player.team
-        %td= link_to 'Show', player
-        %td= link_to 'Edit', edit_player_path(player)
-        %td= link_to 'Destroy', player, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    %br
 
-%br
-
-= link_to 'New Player', new_player_path
+    = link_to 'New Player', new_player_path

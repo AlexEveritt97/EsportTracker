@@ -20,6 +20,12 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	text-align: center;
+	a{
+		color: #d1670e;
+		&:hover{
+			color:  #d1670e;
+		}
+	}
 }
 
 .column-center-match .matches td.matchData {
@@ -34,6 +40,7 @@
 	border-right: none;
 	border-left: none;
 	border-color: #000000;
+	
 }
 
 .column-center-match .matches th.matchInfo {

@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def Home
   	@matches = Match.all
-  	@teams = Team.where("rank <= 10")
+  	@teamsUnsorted = Team.where("rank <= 10")
+  	@teams = @teamsUnsorted.sort_by {|team| team[:rating]}.reverse!
 
   	# Get all players, sort by rating and then take the first 10 to display
   	@playersAll = Player.all

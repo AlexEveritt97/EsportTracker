@@ -1,24 +1,33 @@
 %p#notice= notice
+%div.column-center-team
+  %div.teams
+    %p.teamTitle= @team.name
+    %p
+      %b Team Info:
+      = @team.info
+    %p
+      %b Team Rank:
+      = @team.rank
 
-%p
-  %b Name:
-  = @team.name
-%p
-  %b Info:
-  = @team.info
+    %p
+      %b Players:
+      - @team.players.each do |player|
+        = " | " + player.name + " | "
 
+    %p
+      %b Matches:
 
-%table
-  %tbody
-    - @team.matches.first(10).each do |match|
-      %tr
-        %td.matchData= match.teamA
-        %td.matchData= match.teamAScore
-        %td.matchData= match.teamBScore
-        %td.matchData= match.teamB
-        %td.matchData= link_to 'view', match
-        %br/
+    %table
+      %tbody
+        - @team.matches.first(10).each do |match|
+          %tr
+            %td.matchData= match.teamA
+            %td.matchData= match.teamAScore
+            %td.matchData= match.teamBScore
+            %td.matchData= match.teamB
+            %td.matchData= link_to 'view', match
+            %br/
 
-= link_to 'Edit', edit_team_path(@team)
-\|
-= link_to 'Back', teams_path
+    = link_to 'Edit', edit_team_path(@team)
+    \|
+    = link_to 'Back', teams_path

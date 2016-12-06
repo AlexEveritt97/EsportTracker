@@ -1,25 +1,27 @@
-%h1 Listing teams
+%h1.matchTitle Listing teams
+%div.column-center-team
+  %div.teams
+    %table
+      %thead
+        %tr
+          %th.teamInfo Name
+          %th.teamInfo Info
+          %th.teamInfo Players
+          %th.teamInfo
+          %th.teamInfo Actions
+          %th.teamInfo
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Info
-      %th Players
-      %th
-      %th
+      %tbody
+        - @teams.each do |team|
+          %tr
+            %td.teamData= team.name
+            %td.teamData= team.info
+            - team.players.each do |player|
+              %td.teamData= player.name + ", "
+            %td.teamData= link_to 'Show', team
+            %td.teamData= link_to 'Edit', edit_team_path(team)
+            %td.teamData= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-  %tbody
-    - @teams.each do |team|
-      %tr
-        %td= team.name
-        %td= team.info
-        - team.players.each do |player|
-          %td= player.name + ", "
-        %td= link_to 'Show', team
-        %td= link_to 'Edit', edit_team_path(team)
-        %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    %br
 
-%br
-
-= link_to 'New Team', new_team_path
+    = link_to 'New Team', new_team_path

@@ -1,3 +1,81 @@
 // Place all the styles related to the teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.column-center-team{
+	display: block;
+	width: 40%;
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(78, 79, 81, 1);
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1670e;
+	text-color: #ffffff;
+	margin-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	a{
+		color: #d1670e;
+		&:hover{
+			color:  #d1670e;
+		}
+	}
+}
+
+.teams{
+	color: #ffffff;
+	text-align: center;
+}
+
+.column-center-team .teams td.teamData {
+	text-align: center;
+	font-size: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	width: 10%;
+	border-width: 1px;
+	border-style: solid;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #000000;
+}
+
+.column-center-team .teams th.teamInfo {
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #000000;
+	width: 10%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.teamTitle{
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.matchData{
+	text-align: center;
+	font-size: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	width: 10%;
+	border-width: 1px;
+	border-style: solid;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #000000;
+}
