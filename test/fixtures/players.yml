@@ -4,8 +4,10 @@ one:
   name: MyString
   rating: 1
   info: MyString
+  team: one
 
 two:
   name: MyString
   rating: 1
   info: MyString
+  team: two

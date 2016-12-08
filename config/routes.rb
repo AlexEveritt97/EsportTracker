@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :teams
   resources :players
   resources :matches
-  get 'home/Home'
 
   root 'home#Home'
 
