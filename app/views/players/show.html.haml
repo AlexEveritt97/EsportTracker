@@ -2,20 +2,20 @@
 %div.column-center-player
   %div.players
     %p
-    %b Name:
+    %b= t('.name')
     = @player.name
     %p
-    %b Rating:
+    %b= t('.rating')
     = @player.rating
     %p
-    %b Info:
+    %b= t('.info')
     = @player.info
     %p
-    %b Team:
+    %b= t('.team')
     = link_to @player.team.name, @player.team
 
     %br/
 
-    = link_to 'Edit', edit_player_path(@player)
+    = link_to t('edit'), edit_player_path(@player)
     \|
-    = link_to 'Back', players_path
+    = link_to t('back'), players_path

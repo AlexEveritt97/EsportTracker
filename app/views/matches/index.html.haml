@@ -1,17 +1,17 @@
 %p#notice= notice
-%h1.matchTitle Matches
+%h1.matchTitle= t('.title')
 %div.column-center-match
   %div.matches
     %table
       %thead
         %tr
-          %th.matchInfo Team 1
+          %th.matchInfo= t('.team1')
           %th.matchInfo 
           %th.matchInfo
-          %th.matchInfo Team 2
-          %th.matchInfo Date
+          %th.matchInfo= t('.team2')
+          %th.matchInfo= t('.date')
           %th.matchInfo
-          %th.matchInfo Actions
+          %th.matchInfo= t('.actions')
           %th.matchInfo
       %tbody
         - @matches.each do |match|
@@ -21,10 +21,10 @@
             %td.matchData= match.teamBScore
             %td.matchData= match.teamB
             %td.matchData= match.date
-            %td.matchData= link_to 'View info', match
-            %td.matchData= link_to 'Edit', edit_match_path(match)
-            %td.matchData= link_to 'Destroy', match, :method => :delete, data: { confirm: 'Are you sure?' }
+            %td.matchData= link_to t('view'), match
+            %td.matchData= link_to t('edit'), edit_match_path(match)
+            %td.matchData= link_to t('destroy'), match, :method => :delete, data: { confirm: 'Are you sure?' }
     %br/
-    = link_to 'Add New Match', new_match_path
+    = link_to t('.newMatch'), new_match_path
 
 

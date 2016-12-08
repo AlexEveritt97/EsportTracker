@@ -16,16 +16,16 @@
 
 %div.column-center-match
   %p.matchInfo
-    %strong Date:
+    %strong= t('.date')
     = @match.date
 
   - @teams.each do |team|
     %h4.match-team-head
-      = team.name + " players:"
+      = team.name + t('.players')
     - team.players.each do |player|
       %p.match-team-player-info
         = player.name + " "
 
 
-  %p.links= link_to 'Edit', edit_match_path(@match)
-  %p.links= link_to 'Back', matches_path
+  %p.links= link_to t('edit'), edit_match_path(@match)
+  %p.links= link_to t('back'), matches_path

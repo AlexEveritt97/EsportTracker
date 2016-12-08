@@ -2,12 +2,12 @@
 
 %ul.navbar
   %li.navbaritem
-    %a.navLink{:href => "/"} Home
+    %a.navLink= link_to t('.home'), root_url
   %li.navbaritem
-    %a.navLink{:href => "/matches"} Matches
+    %a.navLink= link_to t('.matches'), matches_url
   %li.navbaritem
-    %a.navLink{:href => "/players"} Players
+    %a.navLink= link_to t('.players'), players_url
   %li.navbaritem
-    %a.navLink{:href => "/teams"} Teams
+    %a.navLink= link_to t('.teams'), teams_url
   %li.navbaritem
-    %a.navLink{:href => "/contact"} Contact
+    %a.navLink= link_to t('.contact'), "/contact"

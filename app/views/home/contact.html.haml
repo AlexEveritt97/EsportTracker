@@ -1,14 +1,14 @@
 %div.form-wrapper
-  %h3.form-title Contact Us
+  %h3.form-title= t('.title')
 
   = form_tag request_contact_path, method:'post' do
     .form-group
-      = label_tag :email, "email", :class => "form-label"
+      = label_tag :email, t('.email'), :class => "form-label"
       = email_field_tag :email," ", title: "enter email", :cols => "10", :rows => "10"
     .form-group
-      = label_tag :message, "message", :class => "form-label"
+      = label_tag :message, t('.msg'), :class => "form-label"
       = text_field_tag :message, " ", title: "enter message", :cols => "20", :rows => "20"
 
     %br/
 
-    = submit_tag "submit"
+    = submit_tag t('.submit')

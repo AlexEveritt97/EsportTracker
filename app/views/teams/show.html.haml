@@ -3,19 +3,19 @@
   %div.teams
     %p.teamTitle= @team.name
     %p
-      %b Team Info:
+      %b= t('.info')
       = @team.info
     %p
-      %b Team Rank:
+      %b= t('.rank')
       = @team.rank
 
     %p
-      %b Players:
+      %b= t('.players')
       - @team.players.each do |player|
         = " | " + player.name + " | "
 
     %p
-      %b Matches:
+      %b= t('.matches')
 
     %table
       %tbody
@@ -25,9 +25,9 @@
             %td.matchData= match.teamAScore
             %td.matchData= match.teamBScore
             %td.matchData= match.teamB
-            %td.matchData= link_to 'view', match
+            %td.matchData= link_to t('view'), match
             %br/
 
-    = link_to 'Edit', edit_team_path(@team)
+    = link_to t('edit'), edit_team_path(@team)
     \|
-    = link_to 'Back', teams_path
+    = link_to t('back'), teams_path

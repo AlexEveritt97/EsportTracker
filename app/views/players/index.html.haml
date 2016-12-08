@@ -1,15 +1,15 @@
-%h1.matchTitle All players
+%h1.matchTitle= t('.title')
 %div.column-center-player
   %div.players
     %table
       %thead
         %tr
-          %th.playerInfo Name
-          %th.playerInfo Rating
-          %th.playerInfo Info
-          %th.playerInfo Team
+          %th.playerInfo= t('.name')
+          %th.playerInfo= t('.rating')
+          %th.playerInfo= t('.info')
+          %th.playerInfo= t('.team')
           %th.playerInfo
-          %th.playerInfo Actions
+          %th.playerInfo= t('.actions')
           %th.playerInfo
 
       %tbody
@@ -19,10 +19,10 @@
             %td.playerData= player.rating
             %td.playerData= player.info
             %td.playerData= player.team.name if player.team
-            %td.playerData= link_to 'Show', player
-            %td.playerData= link_to 'Edit', edit_player_path(player)
-            %td.playerData= link_to 'Destroy', player, :method => :delete, :data => { :confirm => 'Are you sure?' }
+            %td.playerData= link_to t('view'), player
+            %td.playerData= link_to t('edit'), edit_player_path(player)
+            %td.playerData= link_to t('destroy'), player, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
     %br
 
-    = link_to 'New Player', new_player_path
+    = link_to t('.addPlayer'), new_player_path

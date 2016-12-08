@@ -20,9 +20,97 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  appTitle: Esport Tracker
+  appDesc:  "View CSGO matches, teams and players"
+  view: "View"
+  edit: "Edit"
+  destroy: "Destroy"
+  back: "Back"
+
+  shared:
+    header:
+      home: "Home"
+      matches: "Matches"
+      players: "Players"
+      teams: "Teams"
+      contact: "Contact"
+
+    footer:
+      copyNotice: "Coptright Alex Everitt 2016"
 
   home:
     Home:
-        title: "Totally not HLTV.org"
-        content: "Im serious, im not stealing content"
-        matchLink: "Click to view matches"
+        matches: "Matches"
+        teams: "Top 10 Teams"
+        players: "Top 10 Players"
+        seeAll: "See All"
+    contact:
+        title: "Contact Us"
+        email: "Email adress"
+        msg: "Enter Message"
+        submit: "Submit"
+  matches:
+    index:
+      title: "Matches"
+      team1: "Team 1"
+      team2: "Team 2"
+      date: "Date"
+      actions: "Actions"
+      newMatch: "Add New Match"
+    show:
+      players: " players:" 
+      date: "Date"
+    new:
+      title: "Create New Match"
+    edit:
+      title: "Edit Match"
+    form:
+      team1: "Team 1"
+      team2: "Team 2"
+      date: "Date"
+      team1s: "Team 1 Score"
+      team2s: "Team 2 Score"
+  players:
+    index:
+      title: "All Players"
+      name: "Name"
+      rating: "Rating"
+      info: "Info"
+      team: "Team"
+      action: "Actions"
+      addPlayer: "Add New Player"
+    show:
+      name: "Name:"
+      rating: "Rating:"
+      info: "Info:"
+      team: "Team:"
+    new:
+      title: "Create New Player"
+    edit:
+      title: "Edit Player"
+    form:
+      name: "Name"
+      rating: "Rating"
+      info: "Info"
+      team: "Team"
+  teams:
+    index:
+      title: Listing Teams
+      name: Name
+      info: Info
+      players: Players
+      actions: Actions
+      newTeam: Add New Team
+    show:
+      info: "Team Info:"
+      rank: "Team Rank:"
+      players: "Players:"
+      matches: "Matches"
+    new:
+      title: "Create New Team"
+    edit:
+      title: "Edit Team"
+    form:
+      name: "Name"
+      rank: "Rank"
+      info: "Info"

@@ -13,24 +13,24 @@ ul.navbar {
 	border-right: none;
 	border-left: none;
 	border-color: #d1670e;
+	a{
+		color: #d1670e;
+		padding-top: 11px;
+		padding-bottom: 11px;
+		display: inline-block;
+		border-radius: 3px;
+		color: #d1670e;
+		text-align: center;
+		&:hover{
+			text-decoration: none;
+			background-color: #d1670e;
+			color: #000000;
+		}
+	}
 
 }
 li.navbaritem{
 	display: inline-block;
-}
-
-a.navLink{
-	padding-top: 11px;
-	padding-bottom: 11px;
-	display: inline-block;
-	border-radius: 3px;
-	color: #d1670e;
-	text-align: center;
-	&:hover{
-		text-decoration: none;
-		background-color: #d1670e;
-		color: #000000;
-	} 
 }
 
 

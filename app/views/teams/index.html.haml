@@ -1,17 +1,17 @@
-%h1.matchTitle Listing teams
+%h1.matchTitle= t('.title')
 %div.column-center-team
   %div.teams
     %table
       %thead
         %tr
-          %th.teamInfo Name
-          %th.teamInfo Info
+          %th.teamInfo= t('.name')
+          %th.teamInfo= t('.info')
           %th.teamInfo 
           %th.teamInfo
-          %th.teamInfo Players
+          %th.teamInfo= t('.players')
           %th.teamInfo
           %th.teamInfo
-          %th.teamInfo Actions
+          %th.teamInfo= t('.actions')
           %th.teamInfo
           %th.teamInfo
 
@@ -22,10 +22,10 @@
             %td.teamData= team.info
             - team.players.each do |player|
               %td.teamData=  player.name + " "
-            %td.teamData= link_to 'Show', team
-            %td.teamData= link_to 'Edit', edit_team_path(team)
-            %td.teamData= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+            %td.teamData= link_to t('view'), team
+            %td.teamData= link_to t('edit'), edit_team_path(team)
+            %td.teamData= link_to t('destroy'), team, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
     %br
 
-    = link_to 'New Team', new_team_path
+    = link_to t('.newTeam'), new_team_path
