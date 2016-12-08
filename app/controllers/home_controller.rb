@@ -11,4 +11,25 @@ class HomeController < ApplicationController
   	@playersSortedByRating = @playersAll.sort_by {|player| player[:rating]}.reverse!
   	@players = @playersSortedByRating.first(10)
   end
+
+  def contact
+    
+  end
+
+  def request_contact
+    email = params[:email]
+    message = params[:message]
+
+    if email.blank?
+      flash[:alert] = "No email supplied"
+    else
+      flash[:notice] =  " Email sent"
+      ContactMailer.contact_email(email, message).deliver_now
+      
+    end
+
+    redirect_to root_path
+    
+
+  end
 end

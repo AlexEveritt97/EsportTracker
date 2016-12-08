@@ -35,10 +35,10 @@
       %tbody
         -@players.each do |player|
           %tr
-            %td.playerData= player.name
-            %td.playerData= player.rating
-            %td.playerData= player.team.name
-            %td.playerData= link_to 'view', player
+            %td.playerData#homePlayer= player.name
+            %td.playerData#homePlayer= player.rating
+            %td.playerData#homePlayer= player.team.name
+            %td.playerData#homePlayer= link_to 'view', player
 
 %br/
 
