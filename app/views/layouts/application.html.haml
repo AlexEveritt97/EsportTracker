@@ -12,7 +12,7 @@
     = render 'shared/header'
 
     - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+      = content_tag :div, content_tag(:p, value), class: "flash",  id: "#{key}" unless value.blank?
 
     = yield
 

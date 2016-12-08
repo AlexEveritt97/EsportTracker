@@ -68,6 +68,10 @@ input[type=text], select, input[type=number]{
 	width: 20%;
 }
 
+.form-group input[type=text]{
+	width: 60%;
+}
+
 .form-label{
 	color: white;
 	display: block;
@@ -88,4 +92,10 @@ input[type=submit]{
 
 .form-title{
 	color: white;
+}
+
+.flash{
+	color:white;
+	text-align: center;
+	padding-top: 7px;
 }
