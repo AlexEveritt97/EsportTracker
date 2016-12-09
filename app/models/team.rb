@@ -5,4 +5,5 @@ class Team < ApplicationRecord
 	validates :info, presence: true
 	validates :rank, presence: true
 	validates :rank, numericality: { greater_than_or_equal_to: 0}
+	
 end

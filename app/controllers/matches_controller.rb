@@ -36,13 +36,15 @@ class MatchesController < ApplicationController
 
     @match = Match.new(match_params)
 
+    ## gets current teams (if any) and deletes them
     @teamsNow = @match.teams
-
     @match.teams.delete(@teamsNow)
 
+    ## gets team objects based on the select fields in the match form
     @teamA = Team.where(name: params[:match][:teamA])
     @teamB = Team.where(name: params[:match][:teamB])
 
+    ## stores these in the matchTeams table (many to many relationship)
     @match.teams << @teamA
     @match.teams << @teamB
 
@@ -61,10 +63,13 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1.json
   def update
 
+    ## gets the current teams and deletes from from matchTeams table
+    ## this is essentail to ensure matches are only registered to the teams
+    ## playing in them and not the teams that used to be playing in them
     @teamsNow = @match.teams
-
     @match.teams.delete(@teamsNow)
 
+    ## gets and stores new teams from form into matchTeams
     @teamA = Team.where(name: params[:match][:teamA])
     @teamB = Team.where(name: params[:match][:teamB])
 

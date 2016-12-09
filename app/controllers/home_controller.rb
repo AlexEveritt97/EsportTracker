@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def Home
+    ## Get and sort everything required to show the matches, teams and players
+    ## on the home page
+
   	@matchesUnsort = Match.all
   	@matches = @matchesUnsort.sort_by {|match| match[:date]}.reverse!
 
@@ -16,6 +19,7 @@ class HomeController < ApplicationController
     
   end
 
+  # method for the contact mailer
   def request_contact
     email = params[:email]
     message = params[:message]
