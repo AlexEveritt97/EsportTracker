@@ -4,12 +4,16 @@ class HomeControllerTest < ActionController::TestCase
   test "should get Home" do
     get :Home
     assert_response :success
+
+    assert_select 'title', 'Esport Tracker'
   end
 
   test "should get contact" do
 		get :contact
 
 		assert_response :success
+
+		assert_select 'h3', 'Contact Us'
 	end
 
 	test "should post request contact no email" do
