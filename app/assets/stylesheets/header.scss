@@ -1,29 +1,32 @@
 
+
+$background-color: #333;
+$accent-color: #d1670e;
+
 ul.navbar {
 	list-style-type: none;
 	text-align: center;
 	height: 30px;
 	margin: 0;
 	padding: 0;
-	background-color: #333;
+	background-color: $background-color;
 	overflow: hidden;
 	border-radius: 0px !important; //bootstrap was cuasing rounded edges where I didnt want them
 	border-style: solid;
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-color: #d1670e;
+	border-color: $accent-color;
 	a{
-		color: #d1670e;
+		color: $accent-color;
 		padding-top: 11px;
 		padding-bottom: 11px;
 		display: inline-block;
 		border-radius: 3px;
-		color: #d1670e;
 		text-align: center;
 		&:hover{
 			text-decoration: none;
-			background-color: #d1670e;
+			background-color: $accent-color;
 			color: #000000;
 		}
 	}

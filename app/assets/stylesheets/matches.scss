@@ -1,7 +1,10 @@
 // Place all the styles related to the matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$primary-color: rgba(78, 79, 81, 1);
+$text-color: #ffffff;
+$accent-color: #d1670e;
+$border: #000000;
 
 .column-center-match{
 	display: block;
@@ -9,21 +12,21 @@
 	float: center;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: rgba(78, 79, 81, 1);
+	background-color: $primary-color;
 	border-radius: 5px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1670e;
-	text-color: #ffffff;
+	border-color: $accent-color;
+	text-color: $text-color;
 	margin-top: 30px;
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 	text-align: center;
 	a{
-		color: #d1670e;
+		color: $accent-color;
 		&:hover{
-			color:  #d1670e;
+			color:  $accent-color;
 		}
 	}
 }
@@ -39,7 +42,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-color: #000000;
+	border-color: $border;
 	
 }
 
@@ -50,33 +53,33 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-color: #000000;
+	border-color: $border;
 	width: 10%;
 	padding-top: 6px;
 	padding-bottom: 6px;
 }
 
 .matches {
-	color: #ffffff;
+	color: $text-color;
 	text-align: center;
 }
 
 .links a, .matchData a {
-	color: #d1670e;
+	color: $accent-color;
 	&:hover{
-		color:  #d1670e;
+		color:  $accent-color;
 	}
 }
 
 .matchTitle {
-	color: #ffffff;
+	color: $text-color;
 	text-align: center;
 }
 
 .column-center-match th.match-teams-header{
 	font-size: 20px;
 	padding-top: 13px;
-	color: #ffffff;
+	color: $text-color;
 	vertical-align: middle;
 	text-align: center;
 	width: 10%;
@@ -84,34 +87,27 @@
 
 .column-center-match td.match-score-header{
 	font-size: 15px;
-	color: #ffffff;
+	color: $text-color;
 	vertical-align: middle;
 	text-align: center;
 	width: 10%;
 }
 
 p.matchInfo{
-	color: #ffffff;
+	color: $text-color;
 	font-size: 12px;
 	padding-top: 8px;
 
 }
 
 h4.match-team-head{
-	color: #ffffff;
+	color: $text-color;
 	font-size: 20px;
 	padding-top: 8px;
 }
 
 p.match-team-player-info{
-	color: #ffffff;
+	color: $text-color;
 	font-size: 12px;
-}
-
-p.matchLinks{
-	color: #d1670e;
-	&:hover{
-		color:  #d1670e;
-	}
 }
 

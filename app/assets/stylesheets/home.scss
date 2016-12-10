@@ -1,19 +1,21 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$primary-color: rgba(78, 79, 81, 1);
+$text-color: #ffffff;
+$accent-color: #d1670e;
 
 .column-left {
 	float: left;
 	text-align: center;
 	width: 32%;
-	background-color: rgba(78, 79, 81, 1);
+	background-color: $primary-color;
 	border-radius: 5px;
 	margin-right: 1%;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1670e;
-	text-color: #ffffff;
+	border-color: $accent-color;
+	text-color: $text-color;
 	margin-top: 30px;
 	padding-bottom: 10px;
 }
@@ -22,14 +24,14 @@
 	display: inline-block;
 	text-align: center;
 	width: 32%;
-	background-color: rgba(78, 79, 81, 1);
+	background-color: $primary-color;
 	border-radius: 5px;
 	margin-right: 1%;
 	margin-left: 1%;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1670e;
-	text-color: #ffffff;
+	border-color: $accent-color;
+	text-color: $text-color;
 	margin-top: 30px;
 	padding-bottom: 10px;
 }
@@ -38,13 +40,13 @@
 	float: right;
 	text-align: center;
 	width: 32%;
-	background-color: rgba(78, 79, 81, 1);
+	background-color: $primary-color;
 	border-radius: 5px;
 	margin-left: 1%; 
 	border-width: 1px;
 	border-style: solid;
-	border-color: #d1670e;
-	text-color: #ffffff;
+	border-color: $accent-color;
+	text-color: $text-color;
 	margin-top: 30px;
 	padding-bottom: 10px;
 }
@@ -56,7 +58,7 @@
 }
 
 .matches, .teams, .players {
-	color: #ffffff;
+	color: $text-color;
 	
 }
 
@@ -72,8 +74,8 @@
 }
 
 .links a, .matchData a, .teamData a, .playerData a {
-	color: #d1670e;
+	color: $accent-color;
 	&:hover{
-		color:  #d1670e;
+		color:  $accent-color;
 	}
 }
