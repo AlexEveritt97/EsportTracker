@@ -1,30 +1,37 @@
 %h1.matchTitle= t('.title')
 %div.column-center-team
   %div.teams
-    %table
-      %thead
-        %tr
-          %th.teamInfo= t('.name')
-          %th.teamInfo= t('.info')
-          %th.teamInfo 
-          %th.teamInfo
-          %th.teamInfo= t('.players')
-          %th.teamInfo
-          %th.teamInfo
-          %th.teamInfo= t('.actions')
-          %th.teamInfo
-          %th.teamInfo
-
-      %tbody
-        - @teams.each do |team|
+    =form_tag teams_path, :method => 'get' do
+      %p
+        =text_field_tag :search, params[:search]
+        =submit_tag :search
+    - if @teams.size > 0
+      %table
+        %thead
           %tr
-            %td.teamData= team.name
-            %td.teamData= team.info
-            - team.players.each do |player|
-              %td.teamData=  player.name + " "
-            %td.teamData= link_to t('view'), team
-            %td.teamData= link_to t('edit'), edit_team_path(team)
-            %td.teamData= link_to t('destroy'), team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+            %th.teamInfo= t('.name')
+            %th.teamInfo= t('.info')
+            %th.teamInfo 
+            %th.teamInfo
+            %th.teamInfo= t('.players')
+            %th.teamInfo
+            %th.teamInfo
+            %th.teamInfo= t('.actions')
+            %th.teamInfo
+            %th.teamInfo
+
+        %tbody
+          - @teams.each do |team|
+            %tr
+              %td.teamData= team.name
+              %td.teamData= team.info
+              - team.players.each do |player|
+                %td.teamData=  player.name + " "
+              %td.teamData= link_to t('view'), team
+              %td.teamData= link_to t('edit'), edit_team_path(team)
+              %td.teamData= link_to t('destroy'), team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    - else
+      %p.noteams= t('.noTeam')
 
     %br
 

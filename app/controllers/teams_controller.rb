@@ -4,7 +4,15 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.all
+    ## if there is a search param, call the search method, else get all teams
+    if params[:search]
+
+      ## .uniq used to stop a team showing once for each player when searching by team name
+      @teams = Team.search(params[:search]).uniq
+
+    else
+      @teams = Team.all
+    end
   end
 
   # GET /teams/1

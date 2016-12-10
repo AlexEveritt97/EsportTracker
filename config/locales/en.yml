@@ -101,6 +101,7 @@ en:
       players: Players
       actions: Actions
       newTeam: Add New Team
+      noTeam: "No teams found"
     show:
       info: "Team Info:"
       rank: "Team Rank:"

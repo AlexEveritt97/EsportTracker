@@ -47,7 +47,7 @@ player_list = [
 	["Byali", 30 , "probably cheating", teamObjList[2].id],
 	["Dev1ce", 99 , "Best player in denmark, god tier", teamObjList[3].id],
 	["Xyp9x", 90 , "Amazing support and clutch", teamObjList[3].id],
-	["gal1ve", 80 , "best IGL ever", teamObjList[3].id],
+	["gla1ve", 80 , "best IGL ever", teamObjList[3].id],
 	["dupreeh", 96 , "amazing entry", teamObjList[3].id],
 	["Kjaerbye", 94 , "Young talent", teamObjList[3].id],
 	["MSL", 70 , "one of the best", teamObjList[4].id],
