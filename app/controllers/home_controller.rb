@@ -25,9 +25,9 @@ class HomeController < ApplicationController
     message = params[:message]
 
     if email.blank?
-      flash[:alert] = "No email supplied"
+      flash[:alert] = t('emailErr')
     else
-      flash[:notice] =  " Email sent"
+      flash[:notice] =  t('emailSuccess')
       ContactMailer.contact_email(email, message).deliver_now
       
     end

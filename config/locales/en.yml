@@ -26,6 +26,9 @@ en:
   edit: "Edit"
   destroy: "Destroy"
   back: "Back"
+  emailErr: "Error email could not be sent, one or more fields missing"
+  emailSuccess: "Email sent"
+
 
   shared:
     header:

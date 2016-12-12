@@ -5,12 +5,7 @@ class PlayerTest < ActiveSupport::TestCase
 		@team = teams(:one)
 	end
 
-	test "should not save" do
-		player = Player.new
-		player.save
-
-		assert_not player.valid?
-	end
+	
 
 	test "should save" do
 		player = Player.new
