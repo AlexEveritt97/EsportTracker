@@ -27,7 +27,7 @@ team_list.each do |name, info, rank|
 	teamObjList.push(@team)
 end
 
-puts "hello #{teamObjList}"
+
 
 player_list = [
 	["f0rest", 90 , "one of the best", teamObjList[0].id],
